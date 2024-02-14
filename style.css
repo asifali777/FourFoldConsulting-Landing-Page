@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    scroll-behavior: smooth;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+
+}
+/* #main{
+    padding-bottom: 10%;
+} */
+.hidden{
+    display: none;
+}
+.nav-left{
+    z-index: 99;
+}
+.nav-left img{
+    width: 200px;
+   
+}
+nav{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: lightblue; */
+    padding: 2em 3em;
+    transition: .6s;
+}
+.nav-right ul{
+    display: flex;
+
+}
+.nav-right li{
+    list-style: none;
+    padding: 1.5em 3em;
+    transition: all ease-out .5s;
+}
+.active{
+    background-color: #4B858E;
+}
+.nav-right a{
+    text-decoration: none;
+    color: gray; 
+    transition: all ease-out .5s;
+}
+.nav-right li:last-child a{
+    color: white;
+}
+.nav-right a:hover{
+    color: #4B858E;
+}
+.nav-right li:last-child:hover{
+    transform: scale(0.91);
+}
+.hamburger{
+    display: none;
+}
+.banner{
+    width: 100%;
+    display: flex; 
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    z-index: -99;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+.banner h1{
+    color: #4B858E;
+    font-size: 6rem;
+    font-weight: 300;
+    margin-left: 3rem;
+}
+#about{
+    margin-top: 5%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.about-img{
+    width: 50%;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+   width: 90%;
+   height: 90%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-content-text h4, .service-section-left h4, .about-content h4
+    {
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: #4B858E;
+    }
+.about-content-text p{
+        font-size: 28px;
+        color: gray;
+        line-height: 2.5rem;
+        margin-top: 2.5em;
+        font-weight: 300;
+    }
+
+#posterImage{
+    width: 100%;
+    margin-top: 8%;
+    padding: 0 2em;
+}
+.poster-img-div img{
+    width: 100%;
+    object-fit: cover;
+}
+#our-service-section{
+    width: 100%;
+    margin-top: 5%;
+    height: fit-content;
+    padding: 0 2em;
+    display: flex;
+}
+.service-section-left{
+    width: 50%;
+}
+.service-section-right{
+    width: 50%;
+    margin-left: 14%;
+}
+.service-section-left p,.about-content p{
+    font-size: 28px;
+    color: gray;
+    line-height: 2.5rem;
+    font-weight: 300;
+    margin-top: 3%;
+}
+.Purpose-strategy h4,.Growth-transformation h4,.Leadership-teams h4,.Culture-design h4{
+    font-size: 25px;
+    font-weight: 400;
+    color: #4B858E;
+
+}
+.Purpose-strategy,.Growth-transformation,.Leadership-teams,.Culture-design{
+    border-bottom: 1px solid #4B858E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #4B858E;
+}
+.details{
+    height: 0;
+    margin-top: 5%;
+    font-size: 16px;
+    color: gray;
+    font-weight: 400;
+    visibility: hidden; 
+    transition: all ease-in-out .3s;
+    opacity: 0;
+}
+.details1{
+    height: 0;
+    margin-top: 5%;
+    font-size: 16px;
+    color: gray;
+    font-weight: 400;
+    visibility: hidden; 
+    transition: all ease-in-out .3s;
+    opacity: 0;
+}
+.details2{
+    height: 0;
+    margin-top: 5%;
+    font-size: 16px;
+    color: gray;
+    font-weight: 400;
+    visibility: hidden; 
+    transition: all ease-in-out .3s;
+    opacity: 0;
+}
+.details3{
+    height: 0;
+    margin-top: 5%;
+    font-size: 16px;
+    color: gray;
+    font-weight: 400;
+    visibility: hidden; 
+    transition: all ease-in-out .3s;
+    opacity: 0;
+}
+.details.active1{
+    height: 100px;
+    visibility: visible;
+    opacity: 1;
+}
+.details1.active2{
+    height: 100px;
+    visibility: visible;
+    opacity: 1;
+}
+.details2.active3{
+    height: 100px;
+    visibility: visible;
+    opacity: 1;
+}
+.details3.active4{
+    height: 100px;
+    visibility: visible;
+    opacity: 1;
+}
+#aboutUs{
+    width: 100%;
+    margin-top: 10%;
+    height: fit-content;
+    display: grid;
+    place-items:center ;
+    text-align: center;
+}
+.about-content{
+    width: 50%;
+    padding: 3rem;
+}
+.galary{
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+.galary-left{
+    width: 45%;
+}
+.galary-left img{
+    width: 100%;
+    object-fit: cover;
+}
+.galary-right{
+    width: 45%;
+}
+.galary-right img{
+    width: 100%;
+    object-fit: cover;
+}
+.galary-left h1,.galary-right h1{
+    font-size: 28px;
+    font-weight: 400;
+    color: #4B858E;
+    margin-top: 5%;
+}
+.galary-left h2,.galary-right h2{
+    font-size: 22px;
+    font-weight: 400;
+    color: #4B858E;
+    margin-top: 2%;
+}
+.galary-left p,.galary-right p{
+    margin-top: 5%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: gray;
+}
+#form-section{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    background-color: #DAE4E5;
+    padding: 8em 4em;
+}
+.form-left-img{
+    width: 48%;
+}
+.form-left-img img{
+    width: 100%;
+    object-fit: cover;
+}
+.form-right{
+    width: 45%;
+}
+.form-right h1{
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #4B858E;
+}
+.form-right p{
+    font-size: 18px;
+    color: gray;
+    margin-top: 5%;
+}
+.form-right p span{
+    color: #4B858E;
+    cursor: pointer;
+}
+form input{
+    width: 100%;
+    padding: 1.3em;
+    outline: none;
+    margin: 1em 0;
+    border: none;
+}
+form textarea{
+    width: 100%;
+    resize: vertical;
+    min-height: 70px;
+    padding: 1em;
+    /* border: none; */
+    outline: none;
+    margin: 1em 0;
+}
+form input:last-child{
+    width: 150px;
+    height: 70px;
+    background-color: #035C67;
+    color: white;
+    font-size:18px; 
+}
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: #4B858E;
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+.footer-p1
+    {
+        font-size: 20px;
+        margin-bottom: 4%;
+    }
+    .footer-p2{
+        font-size: 20px;
+    }
+.footer-p3{
+    font-size: 20px;
+        margin-bottom: 3%;
+      
+}
+.footer-p4{
+    font-weight: 300;
+}
+.footer-p4 span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer-p4 a{
+    color: white;
+    text-decoration: underline;
+}

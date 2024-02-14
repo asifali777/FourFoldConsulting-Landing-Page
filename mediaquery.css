@@ -1,0 +1,123 @@
+@media (max-width:996px) {
+ 
+    .nav-right{
+        visibility: hidden;
+        overflow: hidden;
+        pointer-events: none;
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        transition: .5s linear;
+    }
+    .nav-right.activeNav{
+        pointer-events:all;
+        visibility: visible;
+        transform: translateX(0%); 
+    }
+    body.noScroll{
+        overflow: hidden;
+    }
+    .nav-right ul{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 25%;
+    }
+    .nav-right li:last-child:hover{
+        transform: scale(1);
+    }
+    .hamburger{
+        display: block;
+        z-index: 99;
+    }
+    .hamburger-button{
+        border: none;
+        background-color: transparent;
+    }
+    
+ .hamburger-button .line{
+    transition: 
+    y 300ms ease-in 300ms,
+    rotate 300ms ease-in,
+    opacity 0ms 300ms
+    ;
+    transform-origin: center;
+}
+ .hamburger-button[aria-expended="true"] .line{
+    transition: 
+    y 300ms ease-in,
+    rotate 300ms ease-in 300ms,
+    opacity 0ms 300ms;
+}
+
+ .hamburger-button[aria-expended="true"] :is(.top, .bottom) {
+    y: 45;
+}
+ .hamburger-button[aria-expended="true"] .top {
+    rotate: 45deg;
+}
+ .hamburger-button[aria-expended="true"] .bottom {
+    rotate: -45deg;
+}
+ .hamburger-button[aria-expended="true"] .middle {
+    opacity: 0;
+}
+}
+@media (max-width:768px) {
+    #about{
+        flex-direction: column;
+    }
+    .about-content{
+        width: 100%;
+    }
+    .about-img,.form-left-img{
+        display: none;
+    }
+    #our-service-section{
+        flex-direction: column;
+    }
+    .service-section-left,.service-section-right{
+        width: 100%;
+        margin: 0;
+        margin-top: 5%;
+    }
+    .galary{
+        flex-direction: column;
+    }
+    .galary-left,.galary-right{
+        width: 100%;
+        margin-top: 6%;
+    }
+   .form-right{
+    width: 100%;
+   }
+}
+@media (max-width:480px) {
+    .nav-left img {
+        width: 150px;
+    }
+    .banner h1 {
+        font-size: 4rem;
+    }
+    #about{
+        margin-top: 14%;
+    }
+    .about-content-text h4, .service-section-left h4, .about-content h4,.form-right h1 {
+        font-size: 2rem;
+    }
+    .service-section-left p, .about-content p {
+        font-size: 20px;
+    }
+    .service-section-right {
+        margin-top: 15%;
+    }
+    #form-section{
+        padding: 6em 2em;
+    }
+    nav {
+        padding: 2em 1em;
+    }
+}
