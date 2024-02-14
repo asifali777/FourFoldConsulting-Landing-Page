@@ -32,6 +32,7 @@ nav{
     /* background-color: lightblue; */
     padding: 2em 3em;
     transition: .6s;
+    z-index: 99;
 }
 .nav-right ul{
     display: flex;

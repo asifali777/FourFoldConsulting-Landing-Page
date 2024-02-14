@@ -55,4 +55,81 @@ button.addEventListener("click", ()=>{
    document.querySelector(".nav-right").classList.toggle('activeNav');
    document.querySelector("body").classList.toggle('noScroll');
    
+});
+
+gsap.from(".about-content-text",{
+   x:-100,
+   duration:1,
+   opacity:0,
+   scrollTrigger:".about-content-text"
 })
+gsap.from(".img",{
+   x:100,
+   duration:1,
+   opacity:0,
+   scrollTrigger:".img"
+})
+gsap.from(".poster-img-div img",{
+   y:100,
+   delay:.5,
+   duration:1,
+   opacity:0,
+   scrollTrigger:".poster-img-div"
+
+});
+gsap.from(".service-section-left",{
+   x:-100,
+   duration:1,
+   opacity:0,
+   delay:.5,
+   scrollTrigger:".service-section-left"
+});
+gsap.from(".Purpose-strategy",{  
+   y:-10,
+   duration:1,
+   opacity:0,
+   scrollTrigger:".service-section-left"
+})
+gsap.from(".Growth-transformation",{
+   y:-10,
+   duration:1,
+   delay:1,
+   opacity:0,
+   scrollTrigger:".service-section-left"
+})
+gsap.from(".Leadership-teams",{
+   y:-10,
+   duration:1,
+   delay:2,
+   opacity:0,
+   scrollTrigger:".service-section-left"
+})
+gsap.from(".Culture-design",{
+   y:-10,  
+   duration:1,
+   delay:3,
+   opacity:0,
+   scrollTrigger:".service-section-left"
+});
+gsap.from(".about-content",{
+   delay:1,
+   y:30,  
+   duration:1,
+   opacity:0,
+   scrollTrigger:".about-content"
+})
+gsap.from(".galary-left,.galary-right",{  
+   duration:1,
+   scale:.8, 
+   scrollTrigger:".galary-left,.galary-right"
+});
+gsap.from(".form-right h1",{
+   y:20,  
+   duration:1,
+   scrollTrigger:".form-right"
+});
+gsap.from("footer p",{
+   y:20,  
+   duration:1.5,
+   scrollTrigger:"footer"
+});
